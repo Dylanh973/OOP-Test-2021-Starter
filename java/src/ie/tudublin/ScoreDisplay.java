@@ -12,7 +12,7 @@ public class ScoreDisplay extends PApplet
 	//String score = "DEF2F2F2EFA2A2B2AFD2E2D2D2D2";
 
 	ArrayList<Note> Notes = new ArrayList<Note>();
-	
+
 	public void settings()
 	{
 		size(1000, 500);
@@ -23,24 +23,38 @@ public class ScoreDisplay extends PApplet
 		println(i);
 	}
 
-	public void setup() 
+	public void setup() 	
 	{
+		loadScore();
 		colorMode(HSB);
 	}
 
 	public void draw()
 	{
 		background(255);
+		float border = 0.1f * width;
+
 		
+		for(int i = 0 ; i<5 ; i++ ){
+			float y = map(i , -5 , 5 , border , height - border);
+			line(border, y, width - border, y);
+		}
 	}
+		
 
 	void drawNotes()
 	{
 
 	}
 
-	public void loadScore()
+ 	void loadScore()
+ {
+	String s = score.substring(0, 8);
+
+	for(int i = s.length() - 1; i >= 0; i--)
 	{
-		
+		System.out.println(s.charAt(i));
 	}
+
+ }
 }
