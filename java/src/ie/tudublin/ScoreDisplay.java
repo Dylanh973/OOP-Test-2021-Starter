@@ -23,7 +23,7 @@ public class ScoreDisplay extends PApplet
 
 	public void setup() 
 	{
-		
+		colorMode(HSB);
 	}
 
 	public void draw()
@@ -34,5 +34,10 @@ public class ScoreDisplay extends PApplet
 
 	void drawNotes()
 	{
+
 	}
-}
+
+	public class Note {
+		private int duration;
+		private char note;
+	}
