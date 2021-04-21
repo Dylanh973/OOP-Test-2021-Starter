@@ -50,6 +50,13 @@ public class ScoreDisplay extends PApplet
  	void loadScore()
  {
 	String s = score.substring(0, 8);
+	int i = 0;
+
+	while( i < score.length())
+	{
+		if(Character.isLetter(score.charAt(i))) //Not sure if isLetter should be used here, basically makes sure its a character that gets passed.
+		
+	}
 
 	for(int i = s.length() - 1; i >= 0; i--)
 	{
