@@ -6,6 +6,22 @@ public class Note
     private int duration;
 	private char note;
 
+    @Override
+    public String toString() {
+        return "Note [duration=" + duration + ", note=" + note + "]";
+    }
+    public Note()
+    {
+
+    }
+
+    public Note(int duration, char note)
+    {
+        this.duration = duration;
+        this.note = note;
+
+    }
+
     public int getDuration() {
         return this.duration;
     }

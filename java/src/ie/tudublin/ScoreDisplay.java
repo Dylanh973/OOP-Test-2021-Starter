@@ -39,5 +39,8 @@ public class ScoreDisplay extends PApplet
 
 	}
 
-
+	public void loadScore()
+	{
+		
+	}
 }
